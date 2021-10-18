@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/** 스타일시트는 중복 아이디에도 적용이 된다. */
+#myid{
+	background: #ff0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #00f;
+}

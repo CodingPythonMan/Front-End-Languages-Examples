@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 활용</title>
+<script type="text/javascript" src="js/event-test1.js"></script>
+<script type="text/javascript" src="js/event-test2.js"></script>
+<script type="text/javascript" src="js/event-test3.js"></script>
+</head>
+<body onload="insertQuestion()">
+	<h1>10 + 50 = <span id="question1">?</span></h1>
+	<!-- 클릭했을 때, printResult() 함수를 호출한다. -->
+	<input type="button" value="결과보기" onclick="printResult()" />
+
+	<!-- <h1> 태그 위에 마우스를 올렸을 때, showResult() 호출 -->
+	<!-- <h1> 태그 위에 마우스를 내렸을 때, hideResult() 호출 -->
+	<h1 onmouseover="showResult()" onmouseout="hideResult()">10 + 50 = <span id="question2">?</span></h1>
+	<p>결과를 보시려면 수식 위에 마우스를 올리세요.</p>
+	
+	<!-- 페이지가 처음 열려서 웹 브라우저에게 HTML태그의 인식이 완료된 후,
+			자동으로 insertQuestion() 함수가 호출되도록 함 -->
+	<h1 id="question3"></h1>
+</body>
+</html>
