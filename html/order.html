@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주문서 계산</title>
+<script type="text/javascript">
+function numformat(prc){
+	return prc;
+}
+function calculate(){
+	document.calc.tot1.value = eval((document.calc.prc1.value)*(document.calc.qty1.value));
+	document.calc.tot2.value = eval((document.calc.prc2.value)*(document.calc.qty2.value));
+	document.calc.tot3.value = eval((document.calc.prc3.value)*(document.calc.qty3.value));
+	document.calc.subtot.value = eval(document.calc.tot1.value) + eval(document.calc.tot2.value) + 
+	eval(document.calc.tot3.value);
+	document.calc.tax.value = numformat((document.calc.subtot.value) * 0.1);
+	document.calc.tot.value = numformat(eval(document.calc.subtot.value) + eval(document.calc.tax.value));
+}
+</script>
+</head>
+<body>
+	<form method="post" name="calc" action="#">
+		<table border=2 cellPadding=2 cellSpacing=2>
+			<tr>
+				<td>수량</td>
+				<td>단가</td>
+				<td>금액</td>
+			</tr>
+			<tr>
+				<td><select name=qty1 onchange=calculate()>
+					<option value=0 selected>0</option>
+					<option value=1>1</option>
+					<option value=2>2</option>
+					<option value=3>3</option>
+				</select></td>
+				<td><select name=prc1 onchange=calculate()>
+					<option value=4000 selected>축구공1 - 4000</option>
+					<option value=6000>축구공2 - 6000</option>
+					<option value=8000>축구공3 - 8000</option>
+				</select>
+				<td><input name=tot1></td>	
+			</tr>
+			<tr>
+				<td><select name=qty2 onchange=calculate()>
+					<option value=0 selected>0</option>
+					<option value=1>1</option>
+					<option value=2>2</option>
+					<option value=3>3</option>
+				</select></td>
+				<td><select name=prc1 onchange=calculate()>
+					<option value=2000 selected>농구공1 - 2000</option>
+					<option value=4000>농구공2 - 4000</option>
+					<option value=6000>농구공3 - 6000</option>
+				</select>
+				<td><input name=tot2></td>	
+			</tr>
+			<tr>
+				<td><select name=qty3 onchange=calculate()>
+					<option value=0 selected>0</option>
+					<option value=1>1</option>
+					<option value=2>2</option>
+					<option value=3>3</option>
+				</select></td>
+				<td><select name=prc1 onchange=calculate()>
+					<option value=1000 selected>배구공1 - 1000</option>
+					<option value=2000>배구공2 - 2000</option>
+					<option value=3000>배구공3 - 3000</option>
+				</select>
+				<td><input name=tot3></td>	
+			</tr>
+			<tr>
+				<td colspan=2>공급가</td>
+				<td><input name=subtot></td>
+			</tr>
+			<tr>
+				<td colspan=2>부가세</td>
+				<td><input name=tax></td>
+			</tr>
+			<tr>
+				<td colspan=2>총액</td>
+				<td><input name=tot></td>
+			</tr>
+			<tr>
+				<td><input type="reset" value="초기화"></td>
+				<td colspan=2><input type="submit" value="전송"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
