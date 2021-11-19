@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 화면</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>회원가입</legend>
+			<table>
+				<tr>
+					<td><label for="name">이름</label></td>
+					<td><input size=60
+					type="text" name="name" id="name"
+					placeholder="이름을 입력하시오(영문자와 숫자로 구성되며 6~12로 입력, 첫글자는 반드시 영문자 소문자)"
+					required="required"
+					autofocus="autofocus"/></td>
+				</tr>
+				<tr>
+					<td><label for="name">비밀번호</label></td>
+					<td><input size=60 type="password" name="name" id="name"
+					placeholder="비밀번호를 입력하시오(문자와 숫자로 구성되며 8~12로 입력)"
+					required="required"/></td>
+				</tr>
+				
+				<tr>
+					<td><label for="name">비밀번호 재확인</label></td>
+					<td><input size=60 type="password" name="name" id="name"
+					placeholder="비밀번호를 재입력하시오"
+					required="required"
+					autofocus="autofocus"/></td>
+				</tr>
+				<tr>
+					<td><br /></td>
+				</tr>
+				<tr>
+					<td><label for="name">이름</label></td>
+					<td><input type="text" size=60 name="name" id="name"
+					required="required"/></td>
+				</tr>
+				<tr>
+					<td><label for="name">성별</label></td>
+					<td><input type="radio" name="gender" value="man"/><label>남자</label>
+					<input type="radio" name="gender" value="woman"/><label>여자</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="name">생일</label></td>
+					<td><input type="date" name="birthday" id="birthday"
+					placeholder="연도-월-일" required="required"/></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td><input size=60 type="text" name="email" id="email"
+					placeholder="본인확인(이메일)" 
+					required="required"/></td>
+				</tr>
+				<tr>
+					<td><br /></td>
+				</tr>
+				<tr>
+					<td><select name="national">
+						<option>+82</option>
+						<option>+02</option>
+						<option>+13</option>	
+					<input size=60 type="text" name="phone" id="phone"
+					required="required"/>
+					<input type="submit" value="인증" /></td>
+				</tr>
+				<tr>
+					<td><input size=60 type="password" name="name" id="name"
+					placeholder="인증번호"
+					required="required"/>
+					<input type="submit" value="확인" /></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center"><input type="submit" value="전송"/>
+					<input type="submit" value="취소"/></td>
+				</tr>
+			
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
