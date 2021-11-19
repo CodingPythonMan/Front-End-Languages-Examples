@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/**
+ * 배열 : 하나의 값 안에 여러개의 변수를 그룹화 하는 단위
+  배열이 생성되면 그 안의 값들은 0부터 순서대로 일련번호를 부여 받는다.
+ */
+
+// 배열의 생성
+var myArray = new Array("홍길동", "자바스크립트", "학생");
+// 아래의 방법도 사용 가능합니다.
+// var myArray = ["홍길동", "자바스크립트", "학생"];
+ 
+// 배열에 저장된 값들을 읽기
+document.write("<h1>" + myArray[0] + "</h1>");
+document.write("<h1>" + myArray[1] + "</h1>");
+document.write("<h1>" + myArray[2] + "</h1>");
+
+// 배열에 저장된 값 변경(할당)
+myArray[0] = "Hong";
+myArray[1] = "Javascript";
+myArray[2] = "Student";
+
+document.write("<h1>" + myArray[0] + "</h1>");
+document.write("<h1>" + myArray[1] + "</h1>");
+document.write("<h1>" + myArray[2] + "</h1>");
+</script>
+</head>
+<body>
+
+</body>
+</html>
